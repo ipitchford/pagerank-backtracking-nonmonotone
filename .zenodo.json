@@ -1,0 +1,56 @@
+{
+  "title": "Backtracking-weighted PageRank is not coordinatewise monotone: minimal counterexamples, a certified census and endpoint tests",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "<p><strong>Unrefereed research candidate.</strong> Backtracking-weighted PageRank runs a restarted random walk on the directed edges of a graph, giving an immediate return along the edge just used weight &mu; and every other continuation weight one: &mu; = 0 is non-backtracking PageRank, &mu; = 1 is ordinary PageRank and &mu; &rarr; &infin; has a cheap closed form. Glover, Jones, Kempton and Oveson (Applied Mathematics and Computation 531 (2026) 130182; arXiv:2211.13353v2) conjectured that every vertex score is monotone in &mu; (Conjecture 3.1), which would let the two cheap scores predict the side of the non-backtracking score, and that a regularly varying degree law forces scale-free infinite-backtracking scores (Conjecture 3.2).</p><p>This package refutes both. On the five-vertex house graph at damping 1/2 the roof vertex has exact scores 638/3615, 22/125 and 8/45 at &mu; = 0, 1, &infin;, so it first loses and then regains score. A closed cubic formula shows that the roof is monotone iff the damping is at most &epsilon;<sub>c</sub> &asymp; 0.2407, with one strict minimum otherwise, and identifies exactly when the endpoint shortcut points the wrong way (&epsilon; &gt; 0.3291). Among graphs of minimum degree two, five vertices is the smallest order for every damping value (house and gem); with leaves allowed the four-vertex paw fails for damping outside an explicit interval [&epsilon;<sub>1</sub>, &epsilon;<sub>2</sub>] &asymp; [0.078, 0.436], so the smallest order is four there and five on that interval (Corollary 5.4), and even a five-vertex tree has a nonmonotone leaf (Proposition 5.5). Failures lift through graph covers to arbitrarily large graphs. An exact census of all 995 connected graphs on 2&ndash;7 vertices at five damping values (exact rational interpolation and exact Sturm root counts on open intervals, no floating point) finds a nonmonotone vertex in 675 of the 853 seven-vertex graphs; it is certified at those five damping values only. Both readings of the conjecture's spread clause fail exactly, and the reversed reading fails even when the extreme vertices are unique (Proposition 8.2). A two-step criterion explains small-damping dips, an exact slope formula at &mu; = 1 gives three cheap sufficient tests, and the full score vector is invariant iff P<sup>2</sup>v = v. Conjecture 3.2 fails for every tail index above one, by a clique-chain construction adapted from Henning, van der Hofstad and Litvak. Numerical experiments find 10&ndash;41% of vertices nonmonotone on standard networks, with small excursions and stable rankings.</p><p>The archive contains the 17-page manuscript (PDF and LaTeX), Python verification code (python-flint, sympy, networkx), exact JSON results, a separate numerical prevalence study, semantic negative controls, CI and SHA-256 sums. Assurance boundary: written proofs; exact certificates; a byte-identical producer-side replay of all exact results from the frozen archive; internal AI-assisted review, AI-assisted adversarial audits by a different model before and after revision (the second found and led to the repair of a census root-counting error), and a verification re-review. This is not peer review, independent reproduction or formal verification. No proof assistant was used. The census covers five damping values; the conjecture wording was checked against arXiv v2 only because the journal text was inaccessible; the configuration-model tail transfer is left open; prevalence results are numerical. Creator: Anonymous. Prose, manuscript and data CC0-1.0; code MIT.</p>",
+  "creators": [
+    {
+      "name": "Anonymous"
+    }
+  ],
+  "version": "1.0.0-candidate",
+  "doi": "10.5281/zenodo.23580381",
+  "publication_date": "2026-10-23",
+  "access_right": "open",
+  "license": "cc-zero",
+  "keywords": [
+    "PageRank",
+    "non-backtracking random walk",
+    "backtracking",
+    "monotonicity",
+    "counterexample",
+    "Hashimoto matrix",
+    "exact computation",
+    "graph census",
+    "degree tail",
+    "power-law hypothesis"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/ipitchford/pagerank-backtracking-nonmonotone/tree/v1.0.0-candidate",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://evidencepress.org/releases/pagerank-backtracking-nonmonotone/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.1016/j.amc.2026.130182",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "arXiv:2211.13353",
+      "relation": "references",
+      "scheme": "arxiv"
+    },
+    {
+      "identifier": "10.1214/25-EJP1415",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Original code (code/*.py, negative_controls.py, CI workflow) is released under the MIT licence; see LICENSES.md in the archive. Short verbatim quotations of Conjectures 3.1 and 3.2 from Glover et al. remain the source authors' text."
+}

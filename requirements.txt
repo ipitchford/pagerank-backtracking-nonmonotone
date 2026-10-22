@@ -1,0 +1,7 @@
+# Python 3.13 (3.11+ should work); pins used to produce and replay the delivered outputs
+python-flint==0.9.0
+sympy==1.14.0
+networkx==3.6.1
+numpy==2.4.4
+scipy==1.17.1
+matplotlib==3.10.8

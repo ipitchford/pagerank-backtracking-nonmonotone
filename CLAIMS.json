@@ -1,0 +1,157 @@
+{
+ "schemaVersion": "1.0",
+ "release": "pagerank-backtracking-nonmonotone",
+ "version": "1.0.0-candidate",
+ "tag": "v1.0.0-candidate",
+ "doi": "10.5281/zenodo.23580381",
+ "conceptDoi": "10.5281/zenodo.23580380",
+ "repository": "https://github.com/ipitchford/pagerank-backtracking-nonmonotone",
+ "creator": "Anonymous",
+ "status": "unrefereed-candidate",
+ "manuscript": "paper/paper.pdf",
+ "source": {
+  "citation": "Glover, Jones, Kempton and Oveson, Effects of backtracking on PageRank, Applied Mathematics and Computation 531 (2026) Article 130182",
+  "doi": "10.1016/j.amc.2026.130182",
+  "openVersion": "arXiv:2211.13353v2",
+  "conjectures": [
+   "Conjecture 3.1",
+   "Conjecture 3.2"
+  ],
+  "wordingCheckedAgainst": "arXiv:2211.13353v2 only (journal text inaccessible)"
+ },
+ "boundary": "'proved' means a written proof in the manuscript (some steps are exact identities checked by the code), not formal verification; 'certified' means an exhaustive or finite exact rational computation, claimed only for the stated finite cases (census: five damping values, orders 2-7); 'numerical' means floating-point evidence only; 'open' is not claimed. Internal AI-assisted review is not peer review or independent reproduction.",
+ "claims": [
+  {
+   "id": "house-counterexample",
+   "location": "Section 1.2 (eq. 2); Theorem 3.1",
+   "status": "certified",
+   "statement": "House graph, uniform restart, eps=1/2: pi_0(4)=638/3615, pi_1(4)=22/125, pi_inf(4)=8/45; both endpoints lie strictly above the middle value, so the roof coordinate is not monotone in mu and the coordinatewise clause of Conjecture 3.1 (hence the conjecture) fails.",
+   "computationalCheck": "results/verification.json: house_certificates"
+  },
+  {
+   "id": "house-cubic-response",
+   "location": "Theorem 3.1; Table 2",
+   "status": "proved",
+   "statement": "Closed cubic-over-cubic formula for the roof score pi_mu(4) as a function of s=(1-eps)mu with coefficients polynomial in eps.",
+   "computationalCheck": "legacy_checks: bivariate_cramer_identity, independent_exact_house_solves (25)"
+  },
+  {
+   "id": "roof-damping-classification",
+   "location": "Theorem 4.1; Corollary 4.2",
+   "status": "proved",
+   "statement": "The roof coordinate is monotone in mu on [0,inf) iff eps <= eps_c ~ 0.2406813 (unique root in (0,1/4)); otherwise it has exactly one strict minimum, located at mu=1 iff eps=4/9; failure occurs already for mu in [0,1].",
+   "computationalCheck": "legacy_checks: bivariate_derivative_identity, exact_threshold_brackets, strict_unit_interval_counterexample, turning_location_at_mu_one"
+  },
+  {
+   "id": "endpoint-shortcut-failure",
+   "location": "Proposition 4.3; Remark 4.4",
+   "status": "proved",
+   "statement": "For the roof, pi_0 and pi_inf lie on the same strict side of pi_1 (so the endpoint shortcut gives the wrong direction) iff eps > eps_0 ~ 0.3291038.",
+   "computationalCheck": "legacy_checks: endpoint_sign_identities"
+  },
+  {
+   "id": "gem-small-damping",
+   "location": "Proposition 5.1",
+   "status": "proved",
+   "statement": "The gem with uniform restart has a nonmonotone coordinate for every eps < eps_g ~ 0.3565988.",
+   "computationalCheck": "results/verification.json: symbolic"
+  },
+  {
+   "id": "minimal-order-mindeg2",
+   "location": "Theorem 5.2",
+   "status": "proved",
+   "statement": "Among connected simple graphs of minimum degree >= 2 with uniform restart, order five is the smallest order with a nonmonotone coordinate, for every fixed eps in (0,1) (house for eps > eps_c, gem for eps < eps_g).",
+   "computationalCheck": "census orders <= 5 consistent; proof in prose"
+  },
+  {
+   "id": "paw-with-leaves",
+   "location": "Proposition 5.3; Corollary 5.4",
+   "status": "proved",
+   "statement": "With leaves allowed (forced return at leaves, statements for mu > 0), P3, K2 and K3 are mu-invariant; the paw is nonmonotone iff eps in (0,eps_1) U (eps_2,1), eps_1 ~ 0.0783255, eps_2 ~ 0.4355202; every other four-vertex graph is monotone. Hence the smallest order with leaves allowed is 4 for eps < eps_1 or eps > eps_2 and 5 for eps_1 <= eps <= eps_2.",
+   "computationalCheck": "results/verification.json: symbolic (all six order-four responses, exact Sturm counts)"
+  },
+  {
+   "id": "tree-counterexample",
+   "location": "Proposition 5.5",
+   "status": "certified",
+   "statement": "The five-vertex tree with edges 04,13,23,34, uniform restart, eps=1/2: leaf 1 has pi_mu(1)=(21mu^2+95mu+84)/(15(9mu^2+42mu+37)), strictly decreasing to a minimum at mu=(2 sqrt 22 - 7)/9 ~ 0.2645 and then increasing; exact certificate pi_{1/10}=9371/61935, pi_{1/4}=349/2307, pi_{1/2}=547/3615. Trees are not always monotone.",
+   "computationalCheck": "results/verification.json: tree_counterexample"
+  },
+  {
+   "id": "cover-lifting",
+   "location": "Lemma 5.6; Corollary 5.7",
+   "status": "proved",
+   "statement": "Backtracking PageRank lifts through finite graph covers; hence for every k >= 2 there are connected graphs of order 5k with a fixed positive fraction of nonmonotone vertices.",
+   "computationalCheck": "legacy_checks: independent_exact_cover_solves (6); lemma is an instance of PageRank invariance under fibrations (Boldi et al.)"
+  },
+  {
+   "id": "two-step-criterion",
+   "location": "Theorem 6.1",
+   "status": "proved",
+   "statement": "Small-damping criterion (uniform restart, minimum degree >= 2): if the two-step profile f_k(mu) has an interior strict extremum with margin delta > 0 at three points a<b<c, then pi_mu(k) is nonmonotone for every 0 < eps < delta/(n+delta); if all sigma_j = d_j/d_k - h_j (j ~ k) have the same weak sign, f_k is monotone and any nonmonotonicity is of order eps^3 or higher.",
+   "computationalCheck": "results/verification.json: endpoint_and_two_step (census: 276 of 3985 min-degree-2 vertices have a nonmonotone two-step profile; 226 of them are nonmonotone at eps=1/10)"
+  },
+  {
+   "id": "slope-formula-and-tests",
+   "location": "Proposition 6.2; Corollary 6.3",
+   "status": "proved",
+   "statement": "Exact formula for d pi_mu(i)/d mu at mu=1 and three one-sided endpoint tests, each sufficient for nonmonotonicity.",
+   "computationalCheck": "checked exactly at 3985 census vertices; at eps=1/2 the tests detect 285 of 478 nonmonotone vertices with no false positives"
+  },
+  {
+   "id": "census-order-7",
+   "location": "Section 7; Table 3",
+   "status": "certified",
+   "statement": "Exact census of all 995 connected graphs on 2-7 vertices at eps in {1/10,1/4,1/3,1/2,17/20}, on mu in [0,inf) and (0,1), using exact Sturm root counts on open intervals; e.g. 353 of 507 seven-vertex graphs of minimum degree 2, and 675 of all 853 seven-vertex connected graphs, have a nonmonotone coordinate for some listed eps. Order-7 counts on (0,1) at the five eps: 50/68/75/85/44 (min degree 2) and 113/141/156/172/89 (all connected). Certified only at the five listed damping values.",
+   "computationalCheck": "results/census_full.json; results/verification.json: census, root_counter_regressions (synthetic responses, Atlas 399, 256 known-root cases); agrees with an independent Sturm implementation of the post-revision audit on all 33,900 coordinates"
+  },
+  {
+   "id": "spread-clause",
+   "location": "Propositions 8.1, 8.2",
+   "status": "certified",
+   "statement": "The spread clause fails as printed (diamond for every eps, by formula; house at eps=1/2 by eight exact values) and when reversed (six-vertex graph with edges 01,04,05,12,23,34,35 at eps=17/20). The house part and the reversed reading are finite exact certificates; the diamond part is proved for every eps. Even with unique extreme vertices for every mu (seven-vertex graph with edges 03,04,12,13,14,25,26,34,56 at eps=17/20) the spread increases from mu=0 to mu=1/10, so uniqueness of the extrema does not rescue the reversed clause.",
+   "computationalCheck": "results/verification.json: spread, unique_extrema_spread_counterexample"
+  },
+  {
+   "id": "invariance-characterisation",
+   "location": "Theorem 9.1; Remark 9.2",
+   "status": "proved",
+   "statement": "For connected graphs of minimum degree >= 2 and restart v, the full vertex score vector is independent of mu iff P^2 v = v; equality of the full vectors pi_1 and pi_inf at one damping value is already equivalent. Sufficiency for regular and biregular graphs is from Glover et al. and Arrigo et al.; the converse is new within the search.",
+   "computationalCheck": "legacy_checks: degree_restart_invariance_sanity_check; proof in prose"
+  },
+  {
+   "id": "prevalence",
+   "location": "Section 10; Table 4",
+   "status": "numerical",
+   "statement": "On standard and random networks (2-cores, uniform restart), 10-41% of vertices are nonmonotone, excursions are small, the endpoint shortcut is wrong for up to 26% of vertices and rankings are stable (Kendall tau >= 0.93).",
+   "computationalCheck": "results/prevalence.json (floating point)"
+  },
+  {
+   "id": "exact-rank-reversal",
+   "location": "Proposition 10.1",
+   "status": "certified",
+   "statement": "Les Miserables 2-core (n=59, m=236), eps=1/2: Fauchelevent and Pontmercy are ordered the same way at mu=0 and mu=inf but oppositely at mu=1. A finite exact-arithmetic search of the 507 seven-vertex min-degree-2 graphs at eps in {1/2,17/20} and seven mu grid points found no such pair (grid points only; not a certificate between them).",
+   "computationalCheck": "results/verification.json: rank_reversal, rank_search_order7"
+  },
+  {
+   "id": "degree-bound",
+   "location": "Proposition 11.1",
+   "status": "proved",
+   "statement": "With minimum degree >= 2, n pi_inf(i) <= (1+eps d_i/2)/(1+eps), so the score tail is never heavier than the degree tail.",
+   "computationalCheck": "results/verification.json: tails.degree_bound_vertices_checked"
+  },
+  {
+   "id": "degree-tail-conjecture-fails",
+   "location": "Theorem 11.2",
+   "status": "proved",
+   "statement": "For every tail index alpha > 1, clique chains of minimum degree two have regularly varying limiting degree law with index alpha while n pi_inf stays below 4/3, so Conjecture 3.2 fails in its local-weak-convergence reading. Mechanism adapted from Henning, van der Hofstad and Litvak.",
+   "computationalCheck": "results/verification.json: tails (beta=4: L=4,5,8,12,16; beta=5: L=4,6,9; regression 43/36)"
+  },
+  {
+   "id": "configuration-model-transfer",
+   "location": "Section 11 (final paragraph); Section 13",
+   "status": "open",
+   "statement": "In a configuration model with i.i.d. positive degrees, n pi_inf(U) should converge in law to a variable Z whose tail transfer from the degree is elementary; the graph-level convergence (model, conditioning, degree hypotheses, local convergence of the radius-two functional) is not proved and is stated as an open problem."
+  }
+ ]
+}

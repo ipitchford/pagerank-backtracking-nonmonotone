@@ -1,0 +1,21 @@
+Runtime: Python 3.13 (3.11 or later should work) with the pins in requirements.txt:
+  python-flint==0.9.0 (fmpz_poly integer polynomials, squarefree factorisation), sympy==1.14.0 (exact fields over
+  Q(mu, eps)), networkx==3.6.1 (graph atlas, standard test graphs), numpy==2.4.4, scipy==1.17.1 (prevalence study
+  only), matplotlib==3.10.8 (figure only). sympy pulls in mpmath (1.3.0 on the release host).
+Exact arithmetic: verify_all.py and negative_controls.py use fractions.Fraction, python-flint fmpz_poly/fmpq_poly (exact Sturm sequences) and sympy
+  QQ only; no floating point enters any certificate or the census. prevalence.py is floating point (numpy/scipy) and
+  its results are labelled numerical.
+Determinism: JSON is written with sorted keys, no timestamps and no paths. verify_all.py --jobs 1 and --jobs 4 give
+  byte-identical output (multiprocessing "spawn" context; results sorted by atlas index). The census depends on the
+  networkx graph atlas ordering (nx.graph_atlas_g()); atlas indices in results/census_full.json refer to networkx 3.6.1.
+Optimised mode: all checks are explicit RuntimeError checks, so python -O disables nothing; scripts are run with -B so
+  no bytecode is written beside them.
+Release replay host: macOS 27.0.1 (Darwin, arm64), CPython 3.13.5 (/Users/admin/.venvs/analysis-py313), packages as
+  above; resolved matplotlib dependencies on that host: contourpy 1.3.3, cycler 0.12.1, fonttools 4.62.1,
+  kiwisolver 1.5.0, packaging 26.0, pillow 12.2.0, pyparsing 3.3.2, python-dateutil 2.9.0.post0, six 1.17.0.
+Runtime on that host: verify_all.py about 5 min with --jobs 2 (final Sturm-based census); prevalence.py about 1 min;
+  negative_controls.py about 40-60 s.
+Continuous integration: GitHub Actions, ubuntu-latest, CPython 3.13 (.github/workflows/replay.yml): SHA256SUMS, full
+  verify_all.py with byte-for-byte comparison of results/verification.json and results/census_full.json, and the
+  negative controls. prevalence.py and the figure are not rerun in CI.
+PDF: built with pdflatex (run three times) from paper/paper.tex; the PDF is not part of the byte-for-byte replay.

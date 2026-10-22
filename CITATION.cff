@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "Please cite this versioned research candidate by its DOI."
+title: "Backtracking-weighted PageRank is not coordinatewise monotone: minimal counterexamples, a certified census and endpoint tests"
+type: software
+authors:
+  - name: Anonymous
+version: 1.0.0-candidate
+doi: 10.5281/zenodo.23580381
+date-released: 2026-10-23
+repository-code: "https://github.com/ipitchford/pagerank-backtracking-nonmonotone"
+url: "https://evidencepress.org/releases/pagerank-backtracking-nonmonotone/"
+license:
+  - CC0-1.0
+  - MIT
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23580381
+    description: "Version DOI (1.0.0-candidate)"
+  - type: doi
+    value: 10.5281/zenodo.23580380
+    description: "Concept DOI (all versions)"
+keywords:
+  - PageRank
+  - non-backtracking random walk
+  - backtracking
+  - monotonicity
+  - counterexample
+  - exact computation
+  - graph census
+  - degree tail
+abstract: "Glover, Jones, Kempton and Oveson (Appl. Math. Comput. 531 (2026) 130182; arXiv:2211.13353v2) conjectured that every vertex score of backtracking-weighted PageRank is monotone in the return weight mu. This package refutes the conjecture: on the five-vertex house graph the roof score first falls and then rises (exact certificate at damping 1/2: 638/3615, 22/125, 8/45), and a closed cubic formula shows that the roof is monotone iff the damping is at most about 0.2407. With minimum degree two, five vertices is the smallest order for every damping value (house and gem); with leaves allowed the smallest order is four for damping outside an explicit interval (the paw) and five inside it, and even a five-vertex tree fails. An exact census of all 995 connected graphs on 2-7 vertices at five damping values finds nonmonotone vertices in most seven-vertex graphs. Both readings of the spread clause fail, even with unique extreme vertices, exact invariance holds iff P^2 v = v, a slope formula at mu = 1 gives cheap endpoint tests, and the degree-tail Conjecture 3.2 fails for every tail index above one. Prevalence on standard networks (10-41% of vertices) is numerical. Unrefereed candidate; checked by internal AI-assisted review only. Prose and data CC0-1.0; code MIT (see LICENSES.md)."
+references:
+  - type: article
+    title: "Effects of backtracking on PageRank"
+    authors:
+      - family-names: Glover
+        given-names: Cory
+      - family-names: Jones
+        given-names: Tyler
+      - family-names: Kempton
+        given-names: Mark
+      - family-names: Oveson
+        given-names: Alice
+    journal: "Applied Mathematics and Computation"
+    volume: 531
+    year: 2026
+    doi: 10.1016/j.amc.2026.130182

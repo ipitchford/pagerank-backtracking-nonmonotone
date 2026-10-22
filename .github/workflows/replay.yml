@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: MIT
+name: Replay
+on:
+  push:
+  pull_request:
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Check SHA256SUMS
+        run: sha256sum -c SHA256SUMS
+      - name: Install pinned packages
+        run: python -m pip install -r requirements.txt
+      - name: Exact certificates and certified census, byte for byte
+        run: |
+          python -B -O code/verify_all.py "$RUNNER_TEMP/out" --jobs 2
+          cmp "$RUNNER_TEMP/out/verification.json" results/verification.json
+          cmp "$RUNNER_TEMP/out/census_full.json" results/census_full.json
+      - name: Semantic negative controls
+        run: python -B -O negative_controls.py
+      - name: Working tree unchanged
+        run: git status --porcelain && test -z "$(git status --porcelain)"

@@ -1,0 +1,382 @@
+{
+ "schemaVersion": "1.0",
+ "provenance": "Compiled 22 October 2026 for release 1.0.0-candidate from the dated search log of the first draft's novelty search (20 October 2026), the manuscript's Section 12 literature boundary, and the internal review records (22 October 2026), plus a retrospective intake check (Semantic Scholar citation graph and Crossref) run on 22 October 2026 at release preparation. It documents the scrutiny performed, not historical priority. Updated 23 October 2026 for the final source (post-revision audit findings and final fix round); search dates are unchanged.",
+ "contributionMap": [
+  {
+   "claim": "The coordinatewise clause of Conjecture 3.1 fails: on the house graph at eps=1/2 the roof score has pi_0=638/3615, pi_1=22/125, pi_inf=8/45; exact cubic roof response; monotone iff eps<=eps_c~0.2406813; one strict minimum otherwise, at mu=1 iff eps=4/9; endpoint shortcut wrong iff eps>eps_0~0.3291038.",
+   "unit": "statement",
+   "paperLocation": "Section 1.2; Theorems 3.1, 4.1; Corollary 4.2; Proposition 4.3",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "\"Effects of Backtracking on PageRank\" conjecture counterexample; \"mu-PageRank\" monotonicity; \"PageRank\" \"Glover\" \"conjecture\"; \"conjecture\" \"monotonicity\" \"PageRank\"",
+     "corpus": "two web search engines; arXiv landing page and v2 HTML/PDF (novelty search of the first draft)"
+    },
+    {
+     "date": "2026-10-20",
+     "query": "\"PageRank\" \"house graph\" backtracking; \"backtracking\" \"PageRank\" \"monotonic\" counterexample; exact-fraction and sequence fingerprints (\"638\" \"3615\"; \"638, 22, 3134\"; denominator 9,87,263,241)",
+     "corpus": "web search engines; OEIS via site search"
+    },
+    {
+     "date": "2026-10-20",
+     "query": "forward-citation follow-up of Glover et al.; Aleja et al. 2019 and Criado et al. 2019 full text",
+     "corpus": "arXiv:2604.13681v1 full text; Aleja published PDF; Criado author preprint"
+    },
+    {
+     "date": "2026-10-22",
+     "query": "retrospective intake check: works citing arXiv:2211.13353 / doi:10.1016/j.amc.2026.130182; Crossref bibliographic search 'backtracking PageRank monotone' (published 2026 onward)",
+     "corpus": "Semantic Scholar citation graph (2 citing works: Avena-Bet-Schroeder-Stegehuis arXiv:2604.13681, already inspected; arXiv:2510.06650 (first author J. Breen; Linear Algebra Appl. 2026), Kemeny's constant for non-backtracking walks, abstract read, not about monotonicity); Crossref (is-referenced-by-count 0 for the AMC DOI; no matching resolution among returned items)"
+    }
+   ],
+   "closestPriorWork": "Glover et al. arXiv:2211.13353v2 Section 3.3 (the conjecture, numerical plots on G(n,4/n)); Aleja et al. 2019 (same kernel on [0,1], no monotonicity counterexample)",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "Minimum degree >=2: order five is the smallest order with a nonmonotone coordinate for every eps (house and gem); with leaves the paw fails iff eps in (0,eps_1)U(eps_2,1), so the smallest order is 4 there and 5 on [eps_1,eps_2]; a five-vertex tree has a nonmonotone leaf; failures lift through covers to every order 5k.",
+   "unit": "statement",
+   "paperLocation": "Propositions 5.1, 5.3, 5.5; Theorem 5.2; Corollaries 5.4, 5.7; Lemma 5.6",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "\"Effects of Backtracking on PageRank\" conjecture counterexample; \"mu-PageRank\" monotonicity; \"PageRank\" \"Glover\" \"conjecture\"; \"conjecture\" \"monotonicity\" \"PageRank\"",
+     "corpus": "two web search engines; arXiv landing page and v2 HTML/PDF (novelty search of the first draft)"
+    },
+    {
+     "date": "2026-10-20",
+     "query": "\"PageRank\" \"house graph\" backtracking; \"backtracking\" \"PageRank\" \"monotonic\" counterexample; exact-fraction and sequence fingerprints (\"638\" \"3615\"; \"638, 22, 3134\"; denominator 9,87,263,241)",
+     "corpus": "web search engines; OEIS via site search"
+    },
+    {
+     "date": "2026-10-22",
+     "query": "retrospective intake check: works citing arXiv:2211.13353 / doi:10.1016/j.amc.2026.130182; Crossref bibliographic search 'backtracking PageRank monotone' (published 2026 onward)",
+     "corpus": "Semantic Scholar citation graph (2 citing works: Avena-Bet-Schroeder-Stegehuis arXiv:2604.13681, already inspected; arXiv:2510.06650 (first author J. Breen; Linear Algebra Appl. 2026), Kemeny's constant for non-backtracking walks, abstract read, not about monotonicity); Crossref (is-referenced-by-count 0 for the AMC DOI; no matching resolution among returned items)"
+    }
+   ],
+   "closestPriorWork": "None found for minimality; Lemma 5.6 is an instance of PageRank invariance under graph fibrations (Boldi-Lonati-Santini-Vigna 2006) and lumpability (Kemeny-Snell)",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "Certified census of all 995 connected graphs on 2-7 vertices at five damping values (exact rational interpolation, squarefree odd part, exact Sturm root counts on open intervals).",
+   "unit": "object",
+   "paperLocation": "Section 7; Table 3",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "\"Effects of Backtracking on PageRank\" conjecture counterexample; \"mu-PageRank\" monotonicity; \"PageRank\" \"Glover\" \"conjecture\"; \"conjecture\" \"monotonicity\" \"PageRank\"",
+     "corpus": "two web search engines; arXiv landing page and v2 HTML/PDF (novelty search of the first draft)"
+    },
+    {
+     "date": "2026-10-20",
+     "query": "\"PageRank\" \"house graph\" backtracking; \"backtracking\" \"PageRank\" \"monotonic\" counterexample; exact-fraction and sequence fingerprints (\"638\" \"3615\"; \"638, 22, 3134\"; denominator 9,87,263,241)",
+     "corpus": "web search engines; OEIS via site search"
+    },
+    {
+     "date": "2026-10-22",
+     "query": "retrospective intake check: works citing arXiv:2211.13353 / doi:10.1016/j.amc.2026.130182; Crossref bibliographic search 'backtracking PageRank monotone' (published 2026 onward)",
+     "corpus": "Semantic Scholar citation graph (2 citing works: Avena-Bet-Schroeder-Stegehuis arXiv:2604.13681, already inspected; arXiv:2510.06650 (first author J. Breen; Linear Algebra Appl. 2026), Kemeny's constant for non-backtracking walks, abstract read, not about monotonicity); Crossref (is-referenced-by-count 0 for the AMC DOI; no matching resolution among returned items)"
+    }
+   ],
+   "closestPriorWork": "No census of coordinatewise monotonicity found; exact real-root counting (Sturm sequences) is standard",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "Exact root counting of W=N'Den-N Den' (squarefree odd part, Sturm sequences on open intervals with endpoint roots divided out) for rational PageRank responses with a proved degree bound 2m, as a certification method for monotonicity.",
+   "unit": "method",
+   "paperLocation": "Section 7 (Method); Section 12",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "\"Effects of Backtracking on PageRank\" conjecture counterexample; \"mu-PageRank\" monotonicity; \"PageRank\" \"Glover\" \"conjecture\"; \"conjecture\" \"monotonicity\" \"PageRank\"",
+     "corpus": "two web search engines; arXiv landing page and v2 HTML/PDF (novelty search of the first draft)"
+    },
+    {
+     "date": "2026-10-22",
+     "query": "retrospective intake check: works citing arXiv:2211.13353 / doi:10.1016/j.amc.2026.130182; Crossref bibliographic search 'backtracking PageRank monotone' (published 2026 onward)",
+     "corpus": "Semantic Scholar citation graph (2 citing works: Avena-Bet-Schroeder-Stegehuis arXiv:2604.13681, already inspected; arXiv:2510.06650 (first author J. Breen; Linear Algebra Appl. 2026), Kemeny's constant for non-backtracking walks, abstract read, not about monotonicity); Crossref (is-referenced-by-count 0 for the AMC DOI; no matching resolution among returned items)"
+    }
+   ],
+   "closestPriorWork": "Sturm's theorem and squarefree decomposition (standard computer algebra); Cramer-rule degree bounds (standard)",
+   "verdict": "known-cited"
+  },
+  {
+   "claim": "Small-damping two-step criterion with sign test sigma_j; exact slope dpi/dmu at mu=1; three one-sided endpoint tests.",
+   "unit": "statement",
+   "paperLocation": "Theorem 6.1; Proposition 6.2; Corollary 6.3",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "\"Effects of Backtracking on PageRank\" conjecture counterexample; \"mu-PageRank\" monotonicity; \"PageRank\" \"Glover\" \"conjecture\"; \"conjecture\" \"monotonicity\" \"PageRank\"",
+     "corpus": "two web search engines; arXiv landing page and v2 HTML/PDF (novelty search of the first draft)"
+    },
+    {
+     "date": "2026-10-20",
+     "query": "\"PageRank\" \"house graph\" backtracking; \"backtracking\" \"PageRank\" \"monotonic\" counterexample; exact-fraction and sequence fingerprints (\"638\" \"3615\"; \"638, 22, 3134\"; denominator 9,87,263,241)",
+     "corpus": "web search engines; OEIS via site search"
+    },
+    {
+     "date": "2026-10-22",
+     "query": "retrospective intake check: works citing arXiv:2211.13353 / doi:10.1016/j.amc.2026.130182; Crossref bibliographic search 'backtracking PageRank monotone' (published 2026 onward)",
+     "corpus": "Semantic Scholar citation graph (2 citing works: Avena-Bet-Schroeder-Stegehuis arXiv:2604.13681, already inspected; arXiv:2510.06650 (first author J. Breen; Linear Algebra Appl. 2026), Kemeny's constant for non-backtracking walks, abstract read, not about monotonicity); Crossref (is-referenced-by-count 0 for the AMC DOI; no matching resolution among returned items)"
+    }
+   ],
+   "closestPriorWork": "Glover et al. Section 3.3 heuristic (high-degree scores fall, low-degree rise); no comparable criterion found",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "Both readings of the spread clause of Conjecture 3.1 fail (exact certificates); the reversed reading fails even with unique extreme vertices for every mu.",
+   "unit": "statement",
+   "paperLocation": "Propositions 8.1, 8.2",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "\"Effects of Backtracking on PageRank\" conjecture counterexample; \"mu-PageRank\" monotonicity; \"PageRank\" \"Glover\" \"conjecture\"; \"conjecture\" \"monotonicity\" \"PageRank\"",
+     "corpus": "two web search engines; arXiv landing page and v2 HTML/PDF (novelty search of the first draft)"
+    },
+    {
+     "date": "2026-10-22",
+     "query": "retrospective intake check: works citing arXiv:2211.13353 / doi:10.1016/j.amc.2026.130182; Crossref bibliographic search 'backtracking PageRank monotone' (published 2026 onward)",
+     "corpus": "Semantic Scholar citation graph (2 citing works: Avena-Bet-Schroeder-Stegehuis arXiv:2604.13681, already inspected; arXiv:2510.06650 (first author J. Breen; Linear Algebra Appl. 2026), Kemeny's constant for non-backtracking walks, abstract read, not about monotonicity); Crossref (is-referenced-by-count 0 for the AMC DOI; no matching resolution among returned items)"
+    }
+   ],
+   "closestPriorWork": "Glover et al. Conjecture 3.1 (the clause itself)",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "Full-vector invariance under backtracking iff P^2 v = v; equality of the full vectors pi_1 and pi_inf at a single damping value suffices.",
+   "unit": "statement",
+   "paperLocation": "Theorem 9.1; Remark 9.2",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "\"PageRank\" \"biregular\" \"if and only if\"; \"PageRank\" \"biregular\" \"converse\"; \"PageRank\" \"P^2\" \"backtracking\"; \"PageRank\" \"invariance\" \"biregular\"",
+     "corpus": "web search engines; Meng-Masuda and Arrigo-Higham-Noferini full texts"
+    },
+    {
+     "date": "2026-10-22",
+     "query": "retrospective intake check: works citing arXiv:2211.13353 / doi:10.1016/j.amc.2026.130182; Crossref bibliographic search 'backtracking PageRank monotone' (published 2026 onward)",
+     "corpus": "Semantic Scholar citation graph (2 citing works: Avena-Bet-Schroeder-Stegehuis arXiv:2604.13681, already inspected; arXiv:2510.06650 (first author J. Breen; Linear Algebra Appl. 2026), Kemeny's constant for non-backtracking walks, abstract read, not about monotonicity); Crossref (is-referenced-by-count 0 for the AMC DOI; no matching resolution among returned items)"
+    }
+   ],
+   "closestPriorWork": "Glover et al. Theorems 3.1-3.2 and Arrigo-Higham-Noferini 2019 Theorem 4 (sufficiency for regular / biregular graphs); Meng-Masuda 2020 (no-restart stationary law)",
+   "verdict": "partially-known-cited"
+  },
+  {
+   "claim": "Conjecture 3.2 fails for every tail index alpha>1 (clique chains of minimum degree two with bounded n pi_inf); one-sided bound n pi_inf(i) <= (1+eps d_i/2)/(1+eps).",
+   "unit": "identification",
+   "paperLocation": "Theorem 11.2; Proposition 11.1",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "\"infinity-PageRank\" \"power-law\"; \"PageRank\" \"cliques\" \"power-law\" \"counterexample\"; \"PageRank\" \"clique\" \"assortative\" \"power-law\"",
+     "corpus": "web search engines; Henning-van der Hofstad-Litvak arXiv:2407.13730v1 Section 3"
+    },
+    {
+     "date": "2026-10-22",
+     "query": "retrospective intake check: works citing arXiv:2211.13353 / doi:10.1016/j.amc.2026.130182; Crossref bibliographic search 'backtracking PageRank monotone' (published 2026 onward)",
+     "corpus": "Semantic Scholar citation graph (2 citing works: Avena-Bet-Schroeder-Stegehuis arXiv:2604.13681, already inspected; arXiv:2510.06650 (first author J. Breen; Linear Algebra Appl. 2026), Kemeny's constant for non-backtracking walks, abstract read, not about monotonicity); Crossref (is-referenced-by-count 0 for the AMC DOI; no matching resolution among returned items)"
+    }
+   ],
+   "closestPriorWork": "Henning, van der Hofstad and Litvak, EJP 30 (2025), Section 3, Theorem 3.6: the same assortative-component mechanism against the ordinary-PageRank power-law hypothesis; adapted here, credited as inherited",
+   "verdict": "partially-known-cited"
+  },
+  {
+   "claim": "Prevalence on standard and random networks (numerical) and an exact transient rank reversal on the Les Miserables 2-core.",
+   "unit": "statement",
+   "paperLocation": "Section 10; Table 4; Proposition 10.1",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "\"Effects of Backtracking on PageRank\" conjecture counterexample; \"mu-PageRank\" monotonicity; \"PageRank\" \"Glover\" \"conjecture\"; \"conjecture\" \"monotonicity\" \"PageRank\"",
+     "corpus": "two web search engines; arXiv landing page and v2 HTML/PDF (novelty search of the first draft)"
+    },
+    {
+     "date": "2026-10-20",
+     "query": "forward-citation follow-up of Glover et al.; Aleja et al. 2019 and Criado et al. 2019 full text",
+     "corpus": "arXiv:2604.13681v1 full text; Aleja published PDF; Criado author preprint"
+    },
+    {
+     "date": "2026-10-22",
+     "query": "retrospective intake check: works citing arXiv:2211.13353 / doi:10.1016/j.amc.2026.130182; Crossref bibliographic search 'backtracking PageRank monotone' (published 2026 onward)",
+     "corpus": "Semantic Scholar citation graph (2 citing works: Avena-Bet-Schroeder-Stegehuis arXiv:2604.13681, already inspected; arXiv:2510.06650 (first author J. Breen; Linear Algebra Appl. 2026), Kemeny's constant for non-backtracking walks, abstract read, not about monotonicity); Crossref (is-referenced-by-count 0 for the AMC DOI; no matching resolution among returned items)"
+    }
+   ],
+   "closestPriorWork": "Glover et al. plots on G(n,4/n) (looked monotone on a 20-point grid); Zhang-Wu 2025 (computation of non-backtracking PageRank)",
+   "verdict": "new-in-bounded-search"
+  }
+ ],
+ "sourcesReadInFull": [
+  {
+   "citation": "Glover, Jones, Kempton, Oveson, Effects of backtracking on PageRank, arXiv:2211.13353v2 (Appl. Math. Comput. 531 (2026) 130182)",
+   "usedFor": "Conjectures 3.1, 3.2 (quoted), Definition 2.4 (model), Theorems 3.1-3.2 (sufficient invariance), Proposition 3.3 (pi_inf)",
+   "readWhat": "Full text of arXiv v2; conjectures checked word for word against an independently fetched copy at re-review; journal full text inaccessible (HTTP 403)",
+   "date": "2026-10-22",
+   "evidenceLocator": "https://arxiv.org/abs/2211.13353v2; manuscript Section 1.1 and Remark 2.1"
+  },
+  {
+   "citation": "Henning, van der Hofstad, Litvak, Power-law hypothesis for PageRank on undirected graphs, EJP 30 (2025), doi:10.1214/25-EJP1415; arXiv:2407.13730",
+   "usedFor": "Mechanism adapted in Theorem 11.2; local-weak-convergence reading",
+   "readWhat": "Section 3, including Theorem 3.6 (arXiv v1)",
+   "date": "2026-10-20",
+   "evidenceLocator": "https://arxiv.org/abs/2407.13730; manuscript Section 11"
+  },
+  {
+   "citation": "Aleja, Criado, Garcia del Amo, Perez, Romance (2019), Chaos Solitons Fractals 126, 283-291, doi:10.1016/j.chaos.2019.06.017",
+   "usedFor": "Same kernel on [0,1]; leaf conventions",
+   "readWhat": "Full published paper (Section 3, Definitions 3.5, 3.7, Proposition 3.12)",
+   "date": "2026-10-20",
+   "evidenceLocator": "https://doi.org/10.1016/j.chaos.2019.06.017; manuscript Section 2"
+  },
+  {
+   "citation": "Arrigo, Higham, Noferini (2019), J. Sci. Comput. 80, 1419-1437, doi:10.1007/s10915-019-00981-8",
+   "usedFor": "Sufficiency of invariance at mu=0 (Theorem 4)",
+   "readWhat": "Full paper",
+   "date": "2026-10-20",
+   "evidenceLocator": "https://doi.org/10.1007/s10915-019-00981-8; manuscript Table 1, Theorem 9.1"
+  },
+  {
+   "citation": "Avena, Bet, Schroeder, Stegehuis, arXiv:2604.13681v1 (2026)",
+   "usedFor": "Later work citing Glover et al.; unrestarted walk with the same edge kernel",
+   "readWhat": "Full v1 PDF and HTML: Definition 2.1, Theorem 3.6, citation of Glover",
+   "date": "2026-10-20",
+   "evidenceLocator": "https://arxiv.org/abs/2604.13681v1"
+  }
+ ],
+ "limitationTriage": [
+  {
+   "limitation": "Census certified only at five damping values (and orders 2-7); behaviour between those eps values not certified.",
+   "closingQuestion": "Can a certified sweep over eps (bivariate root isolation in (mu, eps)) or an order-8 census be run cheaply?",
+   "triedOrSearched": "Census at five values; symbolic bivariate treatment done for the house, gem, paw, P3 and diamond",
+   "estimatedCost": "days of new code and multi-hour computation (order 8: nauty enumeration of ~11k graphs)",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Requires bivariate certified root isolation or a much larger exact computation; listed as open problem 4",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "No proof assistant: covers, the period-class argument and the asymptotic statements are proved in prose only.",
+   "closingQuestion": "Would a Lean/Isabelle formalisation of the house certificate and Theorem 9.1 be cheap?",
+   "triedOrSearched": "Exact identities machine-checked by the verifier; prose proofs audited adversarially",
+   "estimatedCost": "multi-day formalisation",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Formalisation of Markov-chain resolvents and asymptotics is a separate project",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Journal wording of Conjectures 3.1-3.2 unverified (paywall); arXiv v2 checked verbatim.",
+   "closingQuestion": "Can the journal full text be obtained through an open route?",
+   "triedOrSearched": "ScienceDirect (HTTP 403) at novelty search and review; Crossref metadata confirmed",
+   "estimatedCost": "depends on access; no cheap open route found",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "No legitimate access to the publisher text was available",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Configuration-model positive tail transfer (Section 11) unproved.",
+   "closingQuestion": "Does local weak convergence of configuration models (Garavaglia et al.) plus the local formula for pi_inf give the transfer?",
+   "triedOrSearched": "Heuristic via size-biased neighbour degrees; tail transfer proved for the limit variable Z; one-sided bound proved",
+   "estimatedCost": "days",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Graph-level local convergence of the radius-two functional under precise model and degree hypotheses is not proved; research-level",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Prevalence, excursion, shortcut and ranking statistics numerical; exact grid searches certify nothing between grid points.",
+   "closingQuestion": "Could the standard-network results be certified by the census method?",
+   "triedOrSearched": "One exact reversal certificate (Proposition 10.1); numerical study labelled",
+   "estimatedCost": "high: degree-2m interpolation for m in the hundreds",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Exact interpolation at degree 2m for networks with hundreds of edges is impractical with the present method",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "No structural classification of graphs or vertices with monotone coordinates.",
+   "closingQuestion": "Is there a structural class (trees were the candidate) with all coordinates monotone?",
+   "triedOrSearched": "Census includes all trees on <=7 vertices at five eps; the post-revision audit found a five-vertex tree counterexample (now Proposition 5.5), so trees are not such a class",
+   "estimatedCost": "research-level",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Open problem 1, narrowed by Proposition 5.5",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Minimality with leaves (order four) was stated without its damping qualification.",
+   "closingQuestion": "Is P4 monotone for every eps, which with the paw classification gives the exact smallest order with leaves?",
+   "triedOrSearched": "Exact symbolic P4 derivative (strictly signed), star invariant, C4/K4 regular, diamond monotone; Corollary 5.4",
+   "estimatedCost": "2 h",
+   "cheap": true,
+   "decision": "CLOSED",
+   "reasonOpen": "",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Degree-tail proof exceptional set under-specified (adversarial audit M1).",
+   "closingQuestion": "State the discarded cliques explicitly and check the generic scores",
+   "triedOrSearched": "E_L made explicit; verifier checks surviving cliques for beta=4,5 and the 43/36 regression",
+   "estimatedCost": "1 h",
+   "cheap": true,
+   "decision": "CLOSED",
+   "reasonOpen": "",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Gem disagreement between reviewers (house only vs. gem at small damping).",
+   "closingQuestion": "Exact census at order 5 plus a proof for the gem",
+   "triedOrSearched": "Census and Proposition 5.1",
+   "estimatedCost": "2 h",
+   "cheap": true,
+   "decision": "CLOSED",
+   "reasonOpen": "",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Census root counting on (0,1) misordered reversed isolation intervals and mishandled roots at 0 (post-revision audit R1, R2).",
+   "closingQuestion": "Replace interval heuristics by exact Sturm counts on the requested open interval and regress against known roots",
+   "triedOrSearched": "Sturm counter with endpoint roots divided out; regressions (two synthetic responses, Atlas 399, 256 known-root cases); census regenerated and compared with an independent Sturm implementation on all 33,900 coordinates (0 discrepancies)",
+   "estimatedCost": "3 h",
+   "cheap": false,
+   "decision": "CLOSED",
+   "reasonOpen": "",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Reversed spread clause: whether unique extreme vertices suffice.",
+   "closingQuestion": "Is there a graph with unique extrema for all mu whose spread increases?",
+   "triedOrSearched": "Numerical discovery scan, then exact certificate with positive-coefficient gap polynomials (Proposition 8.2)",
+   "estimatedCost": "2 h",
+   "cheap": true,
+   "decision": "CLOSED",
+   "reasonOpen": "",
+   "whyNotClosedNow": ""
+  }
+ ],
+ "extensionScout": {
+  "by": "internal AI-assisted first-round review (editor, three specialist perspectives, devil's advocate) and editorial synthesis",
+  "date": "2026-10-22",
+  "proposals": [
+   "E1 certified census of all connected graphs on <=7 vertices, with and without minimum degree 2",
+   "E2 house + gem cover every damping value at order 5",
+   "E3 structural criterion / endpoint-derivative test and roof heuristic",
+   "E4 prevalence and practical-impact table with a ranking reversal",
+   "E5 reframe or replace the residual bound",
+   "E6 degree tails: positive one-sided result and every tail exponent",
+   "E7 leaf conventions",
+   "E8 paw as smallest counterexample without the degree restriction",
+   "E9 (post-revision audit) tree counterexample and unique-extrema spread witness"
+  ],
+  "actions": [
+   "E1 done (Section 7, certified at five eps)",
+   "E2 proved (Theorem 5.2, Proposition 5.1)",
+   "E3 proved (Theorem 6.1, Proposition 6.2, Corollary 6.3) with heuristic",
+   "E4 done numerically (Section 10) with one exact reversal (Proposition 10.1)",
+   "E5 demoted to Remark 9.2",
+   "E6 Proposition 11.1 and Theorem 11.2 for every alpha>1; configuration-model transfer left open",
+   "E7 Leaves paragraph in Section 2",
+   "E8 Proposition 5.3",
+   "E9 added as Proposition 5.5 and Proposition 8.2; open problems 1 and 3 narrowed"
+  ]
+ }
+}
